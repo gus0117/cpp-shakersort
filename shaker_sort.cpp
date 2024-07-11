@@ -13,11 +13,14 @@ void shakeSort(int a[], int ocup) {
     int ult = ocup - 1;
 
     while(ordenado == false && pri < ult) {
+        cout << "Entro PRIMER While" << endl;
         ordenado = true;
         i = ult;
         
         while(i > pri) {
+            cout << "Entro SEGUNDO While" << endl;
             if(a[i] < a[i - 1]) {
+                cout << "Entro PRIMER if" << endl;
                 cambio(a[i], a[i - 1]);
                 ordenado = false;
             }
@@ -26,10 +29,13 @@ void shakeSort(int a[], int ocup) {
         pri++;
         
         if (ordenado == false) {
+            cout << "Entro SEGUNDO if" << endl;
             ordenado = true;
             i = pri;
             while(i < ult) {
+                cout << "Entro TERCER while" << endl;
                 if(a[i] > a[i + 1]) {
+                    cout << "Entro TERCER if" << endl;
                     cambio(a[i], a[i + 1]);
                     ordenado = false;
                 }
